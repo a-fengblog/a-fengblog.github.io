@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>jQuery - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="jQueryjQuery: 是一个快速简洁的JS框架，简单的理解为 DOM 操作简化方法
+早期，浏览器操作DOM没有统一标准，每个浏览器都有自己的方法，前端开发者需要同一个代码可以在不同浏览器下可以,"> 
+    <meta name="author" content="a-feng"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="jQuery - Hexo"/>
+    <meta name="twitter:description" content="jQueryjQuery: 是一个快速简洁的JS框架，简单的理解为 DOM 操作简化方法
+早期，浏览器操作DOM没有统一标准，每个浏览器都有自己的方法，前端开发者需要同一个代码可以在不同浏览器下可以,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="jQuery - Hexo"/>
+    <meta property="og:description" content="jQueryjQuery: 是一个快速简洁的JS框架，简单的理解为 DOM 操作简化方法
+早期，浏览器操作DOM没有统一标准，每个浏览器都有自己的方法，前端开发者需要同一个代码可以在不同浏览器下可以,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">jQuery</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">jQuery</h1>
+        <div class="stuff">
+            <span>十二月 28, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><p>jQuery: 是一个快速简洁的JS框架，简单的理解为 DOM 操作简化方法</p>
+<p>早期，浏览器操作DOM没有统一标准，每个浏览器都有自己的方法，前端开发者需要同一个代码可以在不同浏览器下可以实现相同效果的框架；</p>
+<h3 id="1-引入方式"><a href="#1-引入方式" class="headerlink" title="1.引入方式"></a>1.引入方式</h3><ol>
+<li><p>下载到本地</p>
+<ul>
+<li>获取源文件</li>
+<li>引入页面，同时注意引用顺序，引入之后才能使用</li>
+<li><script src="./jquery-3.3.1.min.js" /></li>
+</ul>
+</li>
+<li><p>CDN引入</p>
+<ul>
+<li><p>找到可靠的CDN提供商，如：<a target="_blank" rel="noopener" href="https://www.bootcdn.cn/">https://www.bootcdn.cn/</a></p>
+</li>
+<li><p>复制CDN地址，粘贴到页面中</p>
+</li>
+<li><p>```js</p>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">     </span><br><span class="line"></span><br><span class="line">jquery.js 和 jquery.min.js 的区别：</span><br><span class="line"></span><br><span class="line">jquery.js是完整的未压缩的jQuery库，文件比较大，一般用于阅读学习源码或修改源码，一般不用于线上项目。</span><br><span class="line"></span><br><span class="line">jquery.min.js是由完整版的jQuery库经过压缩得来，压缩后功能与未压缩的完全一样，只是将其中的空白字符、注释、空行等与逻辑无关的内容删除，并进行一些优化。这个版本一般用于网站引用使用，减小文件体积，降低网站流量，提升访问速度等。</span><br><span class="line"></span><br><span class="line">#### 版本选择</span><br><span class="line"></span><br><span class="line">jQ 大体分为三个版本：1.xx 、 2.xx 、 3.xx，三个版本对比如下：</span><br><span class="line"></span><br><span class="line">| 版本号    | 说明                             |</span><br><span class="line">| :-------- | :------------------------------- |</span><br><span class="line">| 1.xx 版本 | 兼容 IE678；不再更新；插件多；   |</span><br><span class="line">| 2.xx 版本 | 不兼容 IE678；不再更新；插件少； |</span><br><span class="line">| 3.xx 版本 | 不兼容 IE678；仍在更新；插件少； |</span><br><span class="line"></span><br><span class="line">1.xx 版本优点在于支持 IE678，可以做浏览器兼容，插件是最丰富的的。1.7 之前的 1.x.x 版本与现在的高版本API相差较大，且选择器等各方面性能不高，因此推荐使用选用 1.7 之后的 1.x.x 版本。</span><br><span class="line"></span><br><span class="line">2.x.x 版本相较于第一版没有增加什么新特性，主要是去除了对 IE678 的支持，提升了性能，减小了体积。</span><br><span class="line"></span><br><span class="line">3.x.x 版本相较于之前版本，增加、删除、更改一些属性。</span><br><span class="line"></span><br><span class="line">可以通过 *$.fn.jquery* 来查看 jQ 版本</span><br><span class="line"></span><br><span class="line">### 2.用法$、jQuery</span><br><span class="line"></span><br><span class="line">jQ 提供了两个变量 *$* 和 *jQuery* 给开发者使用，一般情况下使用 *$* 变量即可；如果遇见其它库提供了 *$* 变量，未防止冲突，可以使用 *jQuery* 变量。</span><br><span class="line"></span><br><span class="line">#### 用法</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>$(selector/fn)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 参数</span><br><span class="line"></span><br><span class="line">- *selector*：选择内容</span><br><span class="line"></span><br><span class="line">- *fn*：函数</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">  #### 入口函数</span><br><span class="line"></span><br><span class="line">  以函数作为参数时，作用相当于页面的入口函数，当页面内容加载完成后执行接受的函数。</span><br><span class="line"></span><br><span class="line">  与 `window.onload` 的区别：</span><br><span class="line"></span><br><span class="line">  - 执行时间</span><br><span class="line">    - `window.onload` 必须等到页面内包括图片的所有元素加载完毕后才能执行。</span><br><span class="line">    - `$(function()&#123;&#125;` 是 DOM 结构绘制完毕后就执行，不必等到加载完毕。因此执行时间比上面的快。</span><br><span class="line">  - 编写个数</span><br><span class="line">    - `window.onload` 只能设定一个</span><br><span class="line">    - jQ 入口函数可以同时编写多个，并且都可以得到执行。</span><br><span class="line"></span><br><span class="line">**js代码演示**</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line"> // $(fn) 入口函数，作用类似于 window.onload 的效果</span><br><span class="line">    // 可以声明多次，且一般情况下先于 window.onload 执行</span><br><span class="line"></span><br><span class="line">    // 页面内容加载完成后执行的回调</span><br><span class="line">    window.onload = function ()&#123;</span><br><span class="line">      var box = document.querySelector(&quot;.box&quot;);</span><br><span class="line">      console.log(box);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 先使用 jQ 要记得在它之前引入jQ</span><br><span class="line">    $(function ()&#123;</span><br><span class="line">      console.log(&quot;jQuery&quot;, document.querySelector(&quot;.box&quot;));</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    $(function ()&#123;</span><br><span class="line">      console.log(&quot;jQuery 加载函数&quot;);</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="3-获取jQuery对象-—-jq基本选择器"><a href="#3-获取jQuery对象-—-jq基本选择器" class="headerlink" title="3.获取jQuery对象 —-jq基本选择器"></a>3.获取jQuery对象 —-jq基本选择器</h3><table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$(‘#demo’)</td>
+<td align="left">选择 id 为 demo 的元素</td>
+</tr>
+<tr>
+<td align="left">$(‘.demo’)</td>
+<td align="left">选择 class 为 demo 的所有元素</td>
+</tr>
+<tr>
+<td align="left">$(‘div’)</td>
+<td align="left">选择所有 div 标签元素</td>
+</tr>
+<tr>
+<td align="left">$(‘*‘)</td>
+<td align="left">选择所有标签元素</td>
+</tr>
+<tr>
+<td align="left">$(‘.arr.arr-left’)</td>
+<td align="left">交集选择器，选择同时具有 arr 和 arr-left 类名的元素</td>
+</tr>
+<tr>
+<td align="left">$(‘.arr, .arr-left’)</td>
+<td align="left">并集选择器，选择具有 arr 或 arr-left 类名的元素</td>
+</tr>
+</tbody></table>
+<h4 id="3-1-jQuery-的其他选择器"><a href="#3-1-jQuery-的其他选择器" class="headerlink" title="3-1.jQuery 的其他选择器"></a>3-1.jQuery 的其他选择器</h4><h5 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h5><table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">空格</td>
+<td align="left">后代选择器</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">子代选择器</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">紧邻选择器</td>
+</tr>
+<tr>
+<td align="left">~</td>
+<td align="left">兄弟选择器</td>
+</tr>
+</tbody></table>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* $(元素选择器) =&gt; 返回 jQ对象</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">   元素选择器 与 前面我们学过的 querySelector() 接收的元素选择器一致</span></span><br><span class="line"><span class="comment"> 一般：</span></span><br><span class="line"><span class="comment">​    + 类名、ID、标签名、普选(*)</span></span><br><span class="line"><span class="comment">​    + 后代选择器（空格）、交集选择器(.box.inner)、并集选择器(.box,.inner)</span></span><br><span class="line"><span class="comment">​    + 直接子元素(&gt;)、下一个兄弟元素(+)、后面的所有兄弟元素(~)</span></span><br><span class="line"><span class="comment">​    + 属性([src=&#x27;xx&#x27;])</span></span><br><span class="line"><span class="comment">   DOM：</span></span><br><span class="line"><span class="comment">​    $(DOM)</span></span><br><span class="line"><span class="comment">   筛选：</span></span><br><span class="line"><span class="comment">​    + 伪类(:checked :distabled ...)</span></span><br><span class="line"><span class="comment">​    + :eq(index) 根据下标获取</span></span><br><span class="line"><span class="comment">​   + :lt(index) 获取&lt;下标的 / :gt(index) 获取大于下标的</span></span><br><span class="line"><span class="comment">​    + :first / :last / :even / :odd ...</span></span><br><span class="line"><span class="comment">   jQ对象获取的是一个类数组形式的对象 (S.fn.init - 标识)，数组内承载的就是DOM对象</span></span><br><span class="line"><span class="comment">   jQ对象 -&gt; 用DOM方法（变成DOM） -&gt; 根据下标选择</span></span><br><span class="line"><span class="comment">   DOM 转jQ -&gt; $(DOM)</span></span><br><span class="line"><span class="comment">  */</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h5><table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$(‘a[href]’)</td>
+<td align="left">具有 href 属性的 a 标签</td>
+</tr>
+<tr>
+<td align="left">$(‘a[href=’baidu’]’)</td>
+<td align="left">href 属性为’baidu’的 a 标签</td>
+</tr>
+<tr>
+<td align="left">$(‘a[href!=’baidu’]’)</td>
+<td align="left">href 属性不为’baidu’的 a 标签,包括不具有 href 属性的 a 标签</td>
+</tr>
+<tr>
+<td align="left">$(‘a[href^=’www’]’)</td>
+<td align="left">href 属性以’www’开头的 a 标签</td>
+</tr>
+<tr>
+<td align="left">$(‘a[href$=’cn’]’)</td>
+<td align="left">href 属性以’cn’结尾的 a 标签</td>
+</tr>
+<tr>
+<td align="left">$(‘a[href*=’i’]’)</td>
+<td align="left">href 属性包含’i’的 a 标签</td>
+</tr>
+<tr>
+<td align="left">$(‘a[href][title=’内容’]’)</td>
+<td align="left">具有 href 属性且 title 属性为’内容’的 a 标签</td>
+</tr>
+</tbody></table>
+<h5 id="基本筛选选择器"><a href="#基本筛选选择器" class="headerlink" title="基本筛选选择器"></a>基本筛选选择器</h5><table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">说明(index 从 0 开始)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">:eq(index)</td>
+<td align="left">匹配一个给定索引值的元素</td>
+</tr>
+<tr>
+<td align="left">:gt(index)</td>
+<td align="left">匹配所有大于给定索引值的元素</td>
+</tr>
+<tr>
+<td align="left">:lt(index)</td>
+<td align="left">匹配所有小于给定索引值的元素</td>
+</tr>
+<tr>
+<td align="left">:odd</td>
+<td align="left">匹配所有索引值为奇数的元素</td>
+</tr>
+<tr>
+<td align="left">:even</td>
+<td align="left">匹配所有索引值为偶数的元素</td>
+</tr>
+<tr>
+<td align="left">:first</td>
+<td align="left">获取匹配的第一个元素</td>
+</tr>
+<tr>
+<td align="left">:last</td>
+<td align="left">获取匹配的最后一个元素</td>
+</tr>
+</tbody></table>
+<h5 id="其他选择器"><a href="#其他选择器" class="headerlink" title="其他选择器"></a>其他选择器</h5><table>
+<thead>
+<tr>
+<th align="left">符号</th>
+<th align="left">说明(index 从 0 开始)</th>
+<th align="left">用法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">:empty</td>
+<td align="left">匹配所有不包含子元素或者文本的空元素</td>
+<td align="left">$(‘li:empty’)</td>
+</tr>
+<tr>
+<td align="left">:contains(text)</td>
+<td align="left">匹配包含给定文本的元素</td>
+<td align="left">$(‘li:contains(‘john’)’)</td>
+</tr>
+</tbody></table>
+<p><strong>js代码演示</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;button&gt;放大 / 加粗&lt;/button&gt;</span><br><span class="line"> <span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>还原<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"> <span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>切换倾斜<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"> <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"> <span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="comment">// 使用 jQ对象，变量名前面加上 $ 前缀</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="keyword">var</span> $box = $(<span class="string">&quot;.box&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="keyword">var</span> $btns = $(<span class="string">&quot;button&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="comment">/* </span></span></span></span><br><span class="line"><span class="comment"><span class="javascript"><span class="xml">   jQ所有的操作基本上都是调用函数，需要后面加 ();</span></span></span></span><br><span class="line"><span class="comment"><span class="javascript"><span class="xml">   $ele</span></span></span></span><br><span class="line"><span class="comment"><span class="javascript"><span class="xml">     .addClass(&quot;一个或多个类名&quot;) 添加类名</span></span></span></span><br><span class="line"><span class="comment"><span class="javascript"><span class="xml">     .removeClass(&quot;一个或多个类名&quot;) 删除类名</span></span></span></span><br><span class="line"><span class="comment"><span class="javascript"><span class="xml">     .hasClass(&quot;一个或多个类名&quot;) 判断类名是否存在</span></span></span></span><br><span class="line"><span class="comment"><span class="javascript"><span class="xml">     .toggleClass(&quot;一个或多个类名&quot;) 切换类名</span></span></span></span><br><span class="line"><span class="comment"><span class="javascript"><span class="xml">   */</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   $btns[<span class="number">0</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">     $box.addClass(<span class="string">&quot;big weight&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   $btns[<span class="number">1</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">     $box.removeClass(<span class="string">&quot;big weight&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   $btns[<span class="number">2</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">     $box.toggleClass(<span class="string">&quot;italic&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">     <span class="comment">// if($box.hasClass(&quot;italic&quot;))&#123;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">     <span class="comment">//   $box.removeClass(&quot;italic&quot;);</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">     <span class="comment">// &#125;else &#123;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">     <span class="comment">//   $box.addClass(&quot;italic&quot;);</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">     <span class="comment">// &#125;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-jQuery对象操作"><a href="#4-jQuery对象操作" class="headerlink" title="4.jQuery对象操作"></a>4.jQuery对象操作</h3><h4 id="筛选关系节点"><a href="#筛选关系节点" class="headerlink" title="筛选关系节点"></a>筛选关系节点</h4><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">eq(index)</td>
+<td align="left">获取当前 jQ 数组中下标为 index 的 jQ 对象</td>
+</tr>
+<tr>
+<td align="left">find</td>
+<td align="left">返回符合条件的 jQ 对象的子节点</td>
+</tr>
+<tr>
+<td align="left">parent</td>
+<td align="left">返回 jQ 对象的父节点</td>
+</tr>
+<tr>
+<td align="left">children</td>
+<td align="left">返回 jQ 对象的所有子节点</td>
+</tr>
+<tr>
+<td align="left">prev</td>
+<td align="left">返回 jQ 对象上一个兄弟节点</td>
+</tr>
+<tr>
+<td align="left">prevAll</td>
+<td align="left">返回 jQ 对象的前面所有的兄弟节点</td>
+</tr>
+<tr>
+<td align="left">next</td>
+<td align="left">返回 jQ 对象下一个兄弟节点</td>
+</tr>
+<tr>
+<td align="left">nextAll</td>
+<td align="left">返回 jQ 对象后面所有的兄弟节点</td>
+</tr>
+<tr>
+<td align="left">siblings</td>
+<td align="left">返回当前 jQ 对象所有的兄弟节点</td>
+</tr>
+</tbody></table>
+<h4 id="样式操作"><a href="#样式操作" class="headerlink" title="样式操作"></a>样式操作</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ele.css(&quot;样式名&quot;) 获取元素的样式</span><br><span class="line">$ele.css(&quot;样式名&quot;, &quot;样式值&quot;)  设置单个元素样式</span><br><span class="line">$ele.css(&#123;  一次设置多个元素的样式</span><br><span class="line">    &quot;样式名&quot;: &quot;样式值&quot;,</span><br><span class="line">    &quot;样式名&quot;: &quot;样式值&quot;,</span><br><span class="line">    &quot;样式名&quot;: &quot;样式值&quot;  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>提示：当设置带单位的值时，可以省略单位。</p>
+<h4 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ele.attr(<span class="string">&quot;属性名&quot;</span>) 获取属性值</span><br><span class="line">$ele.attr(<span class="string">&quot;属性名&quot;</span>, <span class="string">&quot;属性值&quot;</span>) 设置单个属性</span><br><span class="line">$ele.attr(&#123; 设置多个属性值</span><br><span class="line">    <span class="string">&quot;属性名&quot;</span>: <span class="string">&quot;属性值&quot;</span>,</span><br><span class="line">    <span class="string">&quot;属性名&quot;</span>: <span class="string">&quot;属性值&quot;</span>,</span><br><span class="line">    <span class="string">&quot;属性名&quot;</span>: <span class="string">&quot;属性值&quot;</span>,</span><br><span class="line">    <span class="string">&quot;属性名&quot;</span>: <span class="string">&quot;属性值&quot;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">$ele.removeAttr(<span class="string">&quot;属性名&quot;</span>)  删除属性</span><br><span class="line"></span><br><span class="line">attr 可以更换为 prop</span><br></pre></td></tr></table></figure>
+
+<p>区别：</p>
+<ul>
+<li><em>attr</em> 设置的<strong>非官方定义属性</strong>会出现在元素标签上，<em>prop</em> 设置的<strong>非官方定义属性</strong>会出现在元素对象上</li>
+<li><em>attr</em> 获取表单选择属性返回设置的值，<em>prop</em> 获取表单选择属性返回 <em>boolean</em> 值</li>
+</ul>
+<p><strong>注意</strong>：attr、prop设置的自定义属性不能通过对方获取</p>
+<h2 id="类名操作"><a href="#类名操作" class="headerlink" title="类名操作"></a>类名操作</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ele.addClass() 向被选元素添加一个或多个类</span><br><span class="line">$ele.removeClass()  从被选元素删除一个或多个类</span><br><span class="line">$ele.hasClass()  判断被选元素是否存在类</span><br><span class="line">$ele.toggleClass()  对被选元素进行添加/删除类的切换操作</span><br></pre></td></tr></table></figure>
+
+<h5 id="常见的元素操作"><a href="#常见的元素操作" class="headerlink" title="常见的元素操作"></a>常见的元素操作</h5><h5 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h5><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">before</td>
+<td align="left">在 jQ 对象之前插入内容</td>
+</tr>
+<tr>
+<td align="left">prepend</td>
+<td align="left">在 jQ 对象的第一个子节点之前插入内容</td>
+</tr>
+<tr>
+<td align="left">append</td>
+<td align="left">在 jQ 对象的最后一个子节点之后插入内容</td>
+</tr>
+<tr>
+<td align="left">after</td>
+<td align="left">在 jQ 对象之后插入内容</td>
+</tr>
+<tr>
+<td align="left">replaceWith</td>
+<td align="left">使用内容替换该 jQ 对象</td>
+</tr>
+</tbody></table>
+<h5 id="jQuery事件"><a href="#jQuery事件" class="headerlink" title="jQuery事件"></a>jQuery事件</h5>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://link.hhtjim.com/163/569213220.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://link.hhtjim.com/163/1894094482.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="ture"
+        data-ae="ture"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

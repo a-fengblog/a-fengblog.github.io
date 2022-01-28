@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>js 进阶 - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="js进阶 **1.offset家族一.offsetWidth 和 offsetHeightelement.offsetWidth/Height 返回元素占据页面的实际大小。
+一般而言对于块状元素：
+,"> 
+    <meta name="author" content="a-feng"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="js 进阶 - Hexo"/>
+    <meta name="twitter:description" content="js进阶 **1.offset家族一.offsetWidth 和 offsetHeightelement.offsetWidth/Height 返回元素占据页面的实际大小。
+一般而言对于块状元素：
+,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="js 进阶 - Hexo"/>
+    <meta property="og:description" content="js进阶 **1.offset家族一.offsetWidth 和 offsetHeightelement.offsetWidth/Height 返回元素占据页面的实际大小。
+一般而言对于块状元素：
+,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">js 进阶</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">js 进阶</h1>
+        <div class="stuff">
+            <span>十二月 28, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="js进阶"><a href="#js进阶" class="headerlink" title="js进阶 **"></a>js进阶 **</h2><h2 id="1-offset家族"><a href="#1-offset家族" class="headerlink" title="1.offset家族"></a>1.offset家族</h2><h5 id="一-offsetWidth-和-offsetHeight"><a href="#一-offsetWidth-和-offsetHeight" class="headerlink" title="一.offsetWidth 和 offsetHeight"></a>一.offsetWidth 和 offsetHeight</h5><p><code>element.offsetWidth/Height</code> 返回元素占据页面的实际大小。</p>
+<p>一般而言对于块状元素：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.offsetWidth/Height = 元素自身的宽/高(width/height) + padding + border</span><br></pre></td></tr></table></figure>
+
+<p>对于行内元素和行内块元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.offsetWidth/Height = 元素内容width、height</span><br></pre></td></tr></table></figure>
+
+<h5 id="二-offsetParent"><a href="#二-offsetParent" class="headerlink" title="二.offsetParent"></a>二.offsetParent</h5><p><code>element.offsetParent</code> 返回距离该元素最近的带有定位的父级元素</p>
+<p>如果当前元素的父级元素没有进行 CSS 定位（<code>absolute</code>、<code>relative</code>） 此元素的 <code>offsetParent</code> 为 <code>body</code></p>
+<p>如果当前元素是 <code>fixed</code> 定位，那么返回值为 <em>null</em></p>
+<h5 id="三-offsetLeft-和-offsetTop"><a href="#三-offsetLeft-和-offsetTop" class="headerlink" title="三.offsetLeft 和 offsetTop"></a>三.offsetLeft 和 offsetTop</h5><p><code>element.offsetTop/Left</code> 返回元素与它的<strong>offsetParent</strong>边框的<strong>上左边距</strong>，如果元素的<strong>offsetParent</strong>是<strong>body</strong>，那么<strong>body</strong>的边框宽度也会计算在内。</p>
+<p>返回值是只读属性且始终是整数。</p>
+<h2 id="匀速-缓动动画-封装"><a href="#匀速-缓动动画-封装" class="headerlink" title="匀速\缓动动画  封装"></a>匀速\缓动动画  封装</h2><h4 id="匀速动画"><a href="#匀速动画" class="headerlink" title="匀速动画"></a>匀速动画</h4><p>元素在每个 <code>setInterval</code> 的回调函数中运动距离一致的动画。书写方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 匀速动画</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Element&#125;</span> </span>ele 运动元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Number&#125;</span> </span>step 运动的步长</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Number&#125;</span> </span>end 运动的终点值</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return <span class="type">&#123;void&#125;</span> </span>无返回值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">average_move</span>(<span class="params">ele, step, end</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1. 如果起点等于终点，不执行运动</span></span><br><span class="line">    <span class="keyword">if</span>(ele.offsetLeft === end)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2. 防止定时器冲突，在设定当前定时器动画时，清除上一个定时器动画</span></span><br><span class="line">    <span class="keyword">if</span>(ele.timer)&#123;</span><br><span class="line">        <span class="built_in">clearInterval</span>(ele.timer);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 3. 设定定时器动画  v = step/time  帧率 24 60 90 120</span></span><br><span class="line">    ele.timer = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 获取元素的起点</span></span><br><span class="line">        <span class="keyword">var</span> start = ele.offsetLeft;</span><br><span class="line">        <span class="comment">// 让元素运动</span></span><br><span class="line">        ele.style.left = start + step + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">        <span class="comment">// 判断是否到终点</span></span><br><span class="line">        <span class="comment">// 起点与终点的距离  &lt;=  步长的大小 下一步要么到达终点，要么超出终点，直接让元素抵达终点，结束动画</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(end - start - step) &lt;= <span class="built_in">Math</span>.abs(step))&#123;</span><br><span class="line">            ele.style.left = end + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">            <span class="built_in">clearInterval</span>(ele.timer);</span><br><span class="line">            ele.timer = <span class="literal">null</span>; <span class="comment">// 重置定时器标识</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="number">1000</span> / <span class="number">24</span>);  <span class="comment">// 帧率：24帧/秒</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="缓动动画"><a href="#缓动动画" class="headerlink" title="缓动动画"></a>缓动动画</h4><p>元素运动越来越慢，即元素在每个 <code>setInterval</code> 的回调函数中运动距离逐渐减小。常用的步长公式为：<code>步长 = (终点 - 起点)/10</code>，实现方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 缓动动画</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Element&#125;</span> </span>ele 运动元素</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;Number&#125;</span> </span>end 运动的终点值</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return <span class="type">&#123;void&#125;</span> </span>无返回值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">slow_move</span>(<span class="params">ele, end</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1. 如果起点等于终点，不执行运动</span></span><br><span class="line">    <span class="keyword">if</span>(ele.offsetLeft == end)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. 防止定时器冲突，在设定当前定时器动画时，清除上一个定时器动画</span></span><br><span class="line">    <span class="keyword">if</span>(ele.timer)&#123;</span><br><span class="line">        <span class="built_in">clearInterval</span>(ele.timer);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. 设定定时器动画  v = step/time  帧率 24 60 90 120</span></span><br><span class="line">    ele.timer = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 获取元素起点</span></span><br><span class="line">        <span class="keyword">var</span> start = ele.offsetLeft;</span><br><span class="line">        <span class="comment">// 设置步长</span></span><br><span class="line">        <span class="keyword">var</span> step = (end - start)/<span class="number">10</span>;</span><br><span class="line">        <span class="comment">// 修正步长，当元素接近终点，为了让元素能够抵达终点，选择在起点与终点距离为10以内时，让元素改为1步长运动</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(step) &lt; <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="comment">// (-1,0) =&gt; -1  0 =&gt; 0  (0,1) =&gt; 1</span></span><br><span class="line">            step = step &gt; <span class="number">0</span> ? <span class="number">1</span> : <span class="built_in">Math</span>.floor(step);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 让元素运动</span></span><br><span class="line">        ele.style.left = start + step + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">        <span class="comment">// 判断终点条件</span></span><br><span class="line">        <span class="keyword">if</span>(start + step === end)&#123;</span><br><span class="line">            <span class="comment">// 清除定时器</span></span><br><span class="line">            <span class="built_in">clearInterval</span>(ele.timer);</span><br><span class="line">            <span class="comment">// 重置定时器标识</span></span><br><span class="line">            ele.timer = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, <span class="number">1000</span> / <span class="number">60</span>); <span class="comment">// FPS： 60帧/秒</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Event"><a href="#2-Event" class="headerlink" title="2.Event"></a>2.Event</h2><p>当DOM事件发生时，我们需要更深入地了解事件的相关内容，比如触发事件的元素、键盘按键的信息、鼠标的位置等。浏览器会创建一个 <strong><code>event</code> 对象</strong>，将时间相关的详细信息放入其中，并将其作为参数传递给处理程序。</p>
+<h5 id="如何获取event"><a href="#如何获取event" class="headerlink" title="如何获取event"></a>如何获取event</h5><h6 id="1-方式一"><a href="#1-方式一" class="headerlink" title="1.方式一"></a>1.方式一</h6><p>DOM事件处理函数中可以使用 <code>event</code> 来获取事件对象，例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">直接打印js</span><br><span class="line"><span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event); <span class="comment">// 鼠标事件对象</span></span><br><span class="line">&#125;</span><br><span class="line">行内样式</span><br><span class="line">&lt;span onclick=<span class="string">&quot;console.log(event)&quot;</span>&gt;hello world&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>上述两种方式都可以在控制台输出事件对象，里面包含了表示事件相关内容的键值对。</p>
+<h6 id="2-方式二"><a href="#2-方式二" class="headerlink" title="2.方式二"></a>2.方式二</h6><p>在事件处理函数中使用浏览器赋予的形参</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 如果需要兼容IE低版本</span></span><br><span class="line">    e = e || <span class="built_in">window</span>.event;</span><br><span class="line">    <span class="built_in">console</span>.log(e); <span class="comment">// 鼠标事件对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，行内绑定的事件处理函数并没有这个形参，因为行内绑定的写法是函数调用，JS中声明函数接受的值为调用传入的值，而非浏览器传递的值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">onclick</span>=<span class="string">&quot;clickHandle()&quot;</span>&gt;</span>这里是函数调用，相当于自己传值<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">onclick</span>=<span class="string">&quot;clickHandle(123)&quot;</span>&gt;</span>传入123<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">clickHandle</span>(<span class="params">e</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(e); <span class="comment">// undefined 123</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="常见的事件对象属性"><a href="#常见的事件对象属性" class="headerlink" title="常见的事件对象属性"></a>常见的事件对象属性</h5><p><strong>event.type</strong></p>
+<p>事件类型，返回触发的事件名称。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.type); <span class="comment">// click</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="事件相关元素"><a href="#事件相关元素" class="headerlink" title="事件相关元素"></a>事件相关元素</h6><h3 id="event-target"><a href="#event-target" class="headerlink" title="event.target"></a>event.target</h3><p>触发事件的元素，在老版本的IE浏览器中请使用 <code>event.srcElement</code> 来替代它。</p>
+<h3 id="event-currentTarget"><a href="#event-currentTarget" class="headerlink" title="event.currentTarget"></a>event.currentTarget</h3>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://link.hhtjim.com/163/569213220.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://link.hhtjim.com/163/1894094482.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="ture"
+        data-ae="ture"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

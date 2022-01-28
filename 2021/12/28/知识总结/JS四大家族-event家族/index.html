@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title> - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="
+JS四大家族-event家族JS四大家族-event家族事件对象DOM事件中,记录事件触发元素,绑定信息,鼠标/键盘的相关信息的对象 – 就是事件对象.
+获取事件对象:
+1.在事件中使用event,"> 
+    <meta name="author" content="a-feng"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content=" - Hexo"/>
+    <meta name="twitter:description" content="
+JS四大家族-event家族JS四大家族-event家族事件对象DOM事件中,记录事件触发元素,绑定信息,鼠标/键盘的相关信息的对象 – 就是事件对象.
+获取事件对象:
+1.在事件中使用event,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content=" - Hexo"/>
+    <meta property="og:description" content="
+JS四大家族-event家族JS四大家族-event家族事件对象DOM事件中,记录事件触发元素,绑定信息,鼠标/键盘的相关信息的对象 – 就是事件对象.
+获取事件对象:
+1.在事件中使用event,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle"></h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title"></h1>
+        <div class="stuff">
+            <span>十二月 28, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <hr>
+<h2 id="JS四大家族-event家族"><a href="#JS四大家族-event家族" class="headerlink" title="JS四大家族-event家族"></a>JS四大家族-event家族</h2><h2 id="JS四大家族-event家族-1"><a href="#JS四大家族-event家族-1" class="headerlink" title="JS四大家族-event家族"></a>JS四大家族-event家族</h2><h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>DOM事件中,记录事件触发元素,绑定信息,鼠标/键盘的相关信息的对象 – 就是事件对象.</p>
+<p>获取事件对象:</p>
+<p>1.在事件中使用event</p>
+<p>2.在事件函数中添加形参 e 注意:行内事件不能这么写</p>
+<p>例如获取到</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">box.onmouseenter = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">&quot;事件对象&quot;</span>, event); </span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">&quot;事件对象&quot;</span>, e);<span class="comment">// 在创建方法声明函数可以简写为e,行内事件中的不可以</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="元素相关"><a href="#元素相关" class="headerlink" title="元素相关"></a>元素相关</h2><ul>
+<li><p>e.currentTarget =&gt; 表示绑定事件的目标元素</p>
+</li>
+<li><p>e.target =&gt; 表示触发事件的目标元素</p>
+</li>
+<li><p>下面是示例:</p>
+</li>
+<li><p>```js</p>
+<script>
+  box.onclick = function (e){
+      // 绑定事件的元素
+      console.log(e.currentTarget);
+      // this => 绑定事件的元素
+      console.log(this === e.currentTarget);
+      // 触发事件的元素
+      console.log(e.target);
+    }
+</script>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 鼠标位置</span><br><span class="line"></span><br><span class="line">- e.pageX e.pageY 返回鼠标到页面的左上距离</span><br><span class="line">- e.celintX e.celintY 返回鼠标与视口的左上距离</span><br><span class="line">- e.offsetX e.offsetY 返回鼠标与触发元素的左上距离</span><br><span class="line">- 公式:e.pageX/Y - 绑定事件元素的左上距离 = 鼠标到元素的左上距离</span><br><span class="line">- 示例:</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">var box = document.queryselector(&#x27;.box&#x27;);</span><br><span class="line">box.onclick = function (e)&#123;</span><br><span class="line">      console.log(&quot;与页面的距离&quot;, &#123;</span><br><span class="line">        x: e.pageX,</span><br><span class="line">        y: e.pageY</span><br><span class="line">      &#125;);</span><br><span class="line">      console.log(&quot;与可视区域的距离&quot;, &#123;</span><br><span class="line">        x: e.clientX,</span><br><span class="line">        y: e.clientY</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      console.log(&quot;与触发事件的元素的距离&quot;, &#123;</span><br><span class="line">        x: e.offsetX,</span><br><span class="line">        y: e.offsetY</span><br><span class="line">      &#125;);</span><br><span class="line">      console.log(&quot;与绑定该事件的元素的距离&quot;, &#123;</span><br><span class="line">        x: e.pageX - this.offsetLeft,</span><br><span class="line">        y: e.pageY - this.offsetTop</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="其它信息"><a href="#其它信息" class="headerlink" title="其它信息"></a>其它信息</h2><ul>
+<li>e.type 返回触发事件的类型</li>
+<li>e.button 鼠标按键信息</li>
+<li>e.which 鼠标按信息</li>
+<li>e.deltaY 识别鼠标的滚动方向</li>
+<li>示例:</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.box&quot;</span>);</span><br><span class="line">     box.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">&quot;触发事件的类型&quot;</span>, e.type);</span><br><span class="line">     &#125;  </span><br><span class="line">     box.onmousedown = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span><br><span class="line">       <span class="comment">// 左中右 -&gt; 012</span></span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">&quot;鼠标按键信息 - button&quot;</span>, e.button); </span><br><span class="line">       <span class="comment">// 左中右 -&gt; 123</span></span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">&quot;鼠标按键信息 - which&quot;</span>, e.which);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// oncontentmenu 右键出现菜单栏</span></span><br><span class="line">     box.oncontextmenu = <span class="built_in">document</span>.oncontextmenu = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span><br><span class="line">       e.preventDefault();</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// 鼠标滚轮滚动事件</span></span><br><span class="line">     box.onwheel = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span><br><span class="line">       <span class="comment">// e.deltaY 标识鼠标滚轮滚动方向</span></span><br><span class="line">       <span class="built_in">console</span>.log(e.deltaY);</span><br><span class="line">       <span class="keyword">if</span>(e.deltaY &gt; <span class="number">0</span>)&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">&quot;往下滚动&quot;</span>);</span><br><span class="line">       &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">&quot;往上滚动&quot;</span>);</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="键盘信息"><a href="#键盘信息" class="headerlink" title="键盘信息"></a>键盘信息</h2><ul>
+<li><p>e.key 返回键盘的信息</p>
+</li>
+<li><p>onkeydown 识别功能键</p>
+</li>
+<li><p>onkeypress 不识别功能键</p>
+</li>
+<li><p>示例:</p>
+</li>
+<li><p>```js<br>var spanLs = document.querySelectorAll(“span”);<br>window.onkeydown = function (e){</p>
+<pre><code>  spanLs[0].innerText = e.key === &quot; &quot; ? &quot;Space&quot; : e.key;
+  spanLs[1].innerText = e.keyCode;
+  if(e.key == &quot;Enter&quot;)&#123;
+    alert(&quot;按下了回车键&quot;)
+  &#125;
+&#125;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 阻止</span><br><span class="line"></span><br><span class="line">1. 组织默认事件 event.preventDefault(); event.returnValue = false; IE兼容</span><br><span class="line"></span><br><span class="line">2. return false ; 直接用在事件处理函数中</span><br><span class="line"></span><br><span class="line">3. 阻止冒泡事件 event.stopPropagation();</span><br><span class="line"></span><br><span class="line">4. event.cancelBuble = true ; IE 兼容</span><br><span class="line"></span><br><span class="line">   示例:</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line">getEl(&quot;.box&quot;).onclick = getEl(&quot;.inner&quot;).onclick = function (e)&#123;</span><br><span class="line">         e.stopPropagation();</span><br><span class="line">         console.log(this);</span><br><span class="line">       &#125;</span><br><span class="line">       getEl(&quot;.insert&quot;).onclick = function (e)&#123;</span><br><span class="line">         console.log(this);</span><br><span class="line">       &#125;</span><br><span class="line">       // getEl(&quot;a&quot;).onclick = function (e)&#123;</span><br><span class="line">         // IE兼容写法</span><br><span class="line">         // e.preventDefault ? e.preventDefault() : e.returnValue = false;</span><br><span class="line">         // return false;</span><br><span class="line">       // &#125;</span><br><span class="line">       function getEl(selector)&#123;</span><br><span class="line">         return document.querySelector(selector);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="元素跟随"><a href="#元素跟随" class="headerlink" title="元素跟随"></a>元素跟随</h2><ul>
+<li><p>示例:</p>
+</li>
+<li><p>```js<br> var imgEl = document.querySelector(“.fixed”);</p>
+<pre><code>      window.onload = window.onmousemove = function (e)&#123;
+        imgEl.style.top = e.pageY + &quot;px&quot;; //元素跟随鼠标的位置
+        imgEl.style.left = e.pageX + &quot;px&quot;;
+      &#125; 
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 鼠标点击特效</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line"> var arr = [&quot;富强&quot;, &quot;民主&quot;, &quot;文明&quot;, &quot;和谐&quot;, &quot;自由&quot;, &quot;平等&quot;, &quot;公正&quot;, &quot;法治&quot;, &quot;爱国&quot;, &quot;敬业&quot;, &quot;诚信&quot;, &quot;友善&quot;];</span><br><span class="line">          // hsl rgb #aaaaaa</span><br><span class="line">          window.onclick = function (e)&#123;</span><br><span class="line">            var dEle = document.createElement(&quot;div&quot;);</span><br><span class="line">            dEle.className = &quot;fixed&quot;;</span><br><span class="line">            // dEle.style.top = e.pageY + &quot;px&quot;;</span><br><span class="line">            // dEle.style.left = e.pageX + &quot;px&quot;;</span><br><span class="line">            // dEle.style.color = `hsl($&#123;Math.floor(Math.random() * 360)&#125;, 80%, 60%)`;</span><br><span class="line">            // 相当于写行内样式</span><br><span class="line">            dEle.style.cssText = `top: $&#123;e.pageY&#125;px; left: $&#123;e.pageX&#125;px;color: hsl($&#123;Math.floor(Math.random()*360)&#125;, 80%, 60%);`;</span><br><span class="line">            dEle.innerText = &quot;♥&quot; + arr[Math.floor(Math.random() * arr.length)] + &quot;♥&quot;;</span><br><span class="line">            document.body.append(dEle);</span><br><span class="line">            setTimeout(function ()&#123;</span><br><span class="line">              dEle.style.opacity = 0;</span><br><span class="line">              dEle.style.transform = &quot;translateY(-80px)&quot;;</span><br><span class="line">            &#125;, 10);</span><br><span class="line">            // 1000ms 后删除自己</span><br><span class="line">            setTimeout(function ()&#123;</span><br><span class="line">              dEle.remove();</span><br><span class="line">            &#125;, 1000)</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="元素拖拽"><a href="#元素拖拽" class="headerlink" title="元素拖拽"></a>元素拖拽</h2><ul>
+<li><p>逻辑一: 元素移动的位置 = 元素原始位置 + 鼠标移动的距离 鼠标移动的距离 = 移动过程中鼠标与页面的距离 - 按下时鼠标与页面的距离</p>
+</li>
+<li><p>逻辑二: 鼠标与页面的距离 = 鼠标与元素的距离 + 元素与页面的距离</p>
+<ul>
+<li><p>示例:</p>
+</li>
+<li><p>```js<br> var content = document.querySelector(‘.content’);</p>
+<pre><code>var box = document.querySelector(&#39;.box&#39;);
+
+box.onmousedown = function (e) &#123;  //鼠标按下时
+  var x = e.pageX - box.offsetLeft,  //元素移动的位置 = 元素原始位置 + 鼠标移动距离
+    //鼠标移动距离 = 移动过程中鼠标与页面的距离 - 按下鼠标时鼠标与页面的距离
+    y = e.pageY - box.offsetTop;  // 此时的数据是鼠标按下时的元素与视口距离 (固定的)
+  window.onmousemove = function (e) &#123; //鼠标移动中
+    //这里用 : 鼠标与页面的活动的距离 - 上面固定的距离 == 这个元素的活动距离 
+    var moveX = e.pageX - x;  //  X
+    var moveY = e.pageY - y;  //  Y
+    var ww = content.offsetWidth - box.offsetWidth; // 元素活动的范围
+    var hh = content.offsetHeight - box.offsetHeight; //大盒子的宽度-小盒子的宽度
+    console.log(ww, hh);
+    if (moveX &lt; 0) &#123;
+      moveX = 0
+    &#125;
+    if (moveX &gt; ww) &#123;
+      moveX = ww
+    &#125;
+    if (moveY &lt; 0) &#123;
+      moveY = 0
+    &#125;
+    if (moveY &gt; hh) &#123;
+      moveY = hh
+    &#125;
+    box.style.left = moveX + &#39;px&#39;;
+    box.style.top = moveY + &#39;px&#39;;
+  &#125;
+&#125;
+window.onmouseup = function () &#123;//鼠标松开时
+  window.onmousemove = null; // 鼠标移出视口时
+&#125;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 事件委托</span><br><span class="line"></span><br><span class="line">- 事件委托: 事件利用利用冒泡机制以及可以在事件中通过事件对象获取到事件触发元素的的能力,将子元素委托给父元素监听的方式.</span><br><span class="line">- 特点: 减少了DOM事件绑定的次数; 新添加的元素也具有该事件; 节省资源(循环遍历元素,绑定的元素越多,占用内存资源就越多).</span><br><span class="line">- 过给绑定事件后的列表田间元素,新元素不会事件:</span><br><span class="line"></span><br><span class="line">```js</span><br><span class="line"> var lis = document.querySelectorAll(&quot;li&quot;),</span><br><span class="line">      ulEle = document.querySelector(&quot;ul&quot;),</span><br><span class="line">      btn = document.querySelector(&quot;button&quot;);</span><br><span class="line">    btn.onclick = function ()&#123;</span><br><span class="line">      var liEle = document.createElement(&quot;li&quot;); //向列表中添加新的元素</span><br><span class="line">      liEle.innerText = &quot;LI_&quot; + (ulEle.children.length + 1);</span><br><span class="line">      ulEle.append(liEle);</span><br><span class="line">    &#125;</span><br><span class="line">    // 改为事件委托 -- 要判断触发事件的元素</span><br><span class="line">    ulEle.onclick = function (e)&#123;</span><br><span class="line">      // element.tagName 返回元素的标签名，标签名是大写的</span><br><span class="line">      if(e.target.tagName == &quot;LI&quot;)&#123; // 找到li标签</span><br><span class="line">        e.target.style.color = &quot;#f00&quot;;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="element-colsest"><a href="#element-colsest" class="headerlink" title="element.colsest()"></a>element.colsest()</h2><ul>
+<li><p>element.colsest() 方法: 匹配特定选择器且离当前元素最近的父类元素(也可以是当前元素本身);如果匹配不到,则返回 null 值;IE不支持此方法</p>
+</li>
+<li><p>语法 : var closestElement = targetElement.closest(selectors);</p>
+</li>
+<li><p>当事件委托中有子元素时: 可以通过匹配特定的元素属性添加事件 示例:</p>
+</li>
+<li><pre><code class="js">var lis = document.querySelectorAll(&quot;li&quot;),
+      ulEle = document.querySelector(&quot;ul&quot;),
+      btn = document.querySelector(&quot;button&quot;);
+    btn.onclick = function ()&#123;
+      var liEle = document.createElement(&quot;li&quot;);
+      liEle.innerHTML = &quot;&lt;p&gt;LI_&quot; + (ulEle.children.length + 1) + &quot;&lt;/p&gt;&quot;;
+      ulEle.append(liEle);
+    &#125;
+    // 改为事件委托 -- 要判断触发事件的元素
+    ulEle.onclick = function (e)&#123;
+      // element.tagName 返回元素的标签名，标签名是大写的
+      // element.closest(selector) 返回距离element元素最近的符合selector选择条件的父元素，包括自己。如果没找到返回 null
+      // 用了 closest 只有两个结果：1. 找到了元素  2. null
+      // console.log(e.target.tagName);
+      var ele = e.target.closest(&quot;li&quot;);
+      if(ele)&#123;
+        ele.style.color = &quot;#f00&quot;;
+      &#125;
+      // console.log(e.target);
+    &#125;
+</code></pre>
+</li>
+</ul>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://link.hhtjim.com/163/569213220.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://link.hhtjim.com/163/1894094482.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="ture"
+        data-ae="ture"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

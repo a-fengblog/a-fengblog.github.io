@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JS:ECMAScript(前端的核心)+DOM+BOM(浏览器对象模型) - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="JS: ECMAScript(前端的核心) + DOM + BOM（浏览器对象模型）1.BOMBOM的内容 -&amp;gt; 浏览器提供的属性和方法 -&amp;gt; 依托于window
+12345678910,"> 
+    <meta name="author" content="a-feng"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="JS:ECMAScript(前端的核心)+DOM+BOM(浏览器对象模型) - Hexo"/>
+    <meta name="twitter:description" content="JS: ECMAScript(前端的核心) + DOM + BOM（浏览器对象模型）1.BOMBOM的内容 -&amp;gt; 浏览器提供的属性和方法 -&amp;gt; 依托于window
+12345678910,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="JS:ECMAScript(前端的核心)+DOM+BOM(浏览器对象模型) - Hexo"/>
+    <meta property="og:description" content="JS: ECMAScript(前端的核心) + DOM + BOM（浏览器对象模型）1.BOMBOM的内容 -&amp;gt; 浏览器提供的属性和方法 -&amp;gt; 依托于window
+12345678910,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">JS:ECMAScript(前端的核心)+DOM+BOM(浏览器对象模型)</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">JS:ECMAScript(前端的核心)+DOM+BOM(浏览器对象模型)</h1>
+        <div class="stuff">
+            <span>十二月 28, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h2 id="JS-ECMAScript-前端的核心-DOM-BOM（浏览器对象模型）"><a href="#JS-ECMAScript-前端的核心-DOM-BOM（浏览器对象模型）" class="headerlink" title="JS: ECMAScript(前端的核心) + DOM + BOM（浏览器对象模型）"></a>JS: ECMAScript(前端的核心) + DOM + BOM（浏览器对象模型）</h2><h3 id="1-BOM"><a href="#1-BOM" class="headerlink" title="1.BOM"></a>1.<strong>BOM</strong></h3><p><strong>BOM</strong>的内容 -&gt; 浏览器提供的属性和方法 -&gt; 依托于window</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">alert()</span><br><span class="line"></span><br><span class="line"> <span class="built_in">console</span>.log()</span><br><span class="line"></span><br><span class="line"> prompt()</span><br><span class="line"></span><br><span class="line"> ...</span><br><span class="line"></span><br><span class="line"> getComputedStyle()</span><br><span class="line"></span><br><span class="line"> <span class="built_in">setTimeout</span>()</span><br><span class="line"></span><br><span class="line"> <span class="built_in">setInterval</span>()</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-网址"><a href="#2-网址" class="headerlink" title="2.网址"></a>2.网址</h3><p>例如:百度：<a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com</a> -&gt; 百度的首页  ⭐</p>
+<p>URL（<em>Uniform Resource Locator</em>）（网络资源统一定位符 -&gt; 表示一个文件地址）：</p>
+<p>协议+主机地址(ip/域名)+端口号+路径?+文件名?+参数?+锚点?</p>
+<p>协议:http:// https://  网络传输协议 -&gt; 让别人的电脑访问分享的文件</p>
+<p><strong>主机地址</strong>：IP地址 -&gt; 域名（易记 -&gt; 通过DNS解析域名找到IP）</p>
+<p>   <strong>域名</strong>：服务器名 + 主域（qq.com / 163.com …)</p>
+<p>   <strong>本地打开服务</strong>：</p>
+<p>​    <strong>主机IP：</strong>127.0.0.1 =&gt; localhost  只有自己可以访问的服务形式</p>
+<p>​    <strong>局域网</strong>：192.168.124.39</p>
+<p>​    <strong>无线网</strong>：查看自己电脑输入ipconfig    192.168.124.1本机</p>
+<p> <strong>端口号</strong>：可以理解为主机打开的窗户 -&gt; 不能跨域窗口访问其它内容</p>
+<p>   <strong>http</strong>  端口号为 :80</p>
+<p>   <strong>https</strong> 端口号为 :443</p>
+<p>—   上述三者共同组成 <strong>源(origin) = 协议 + 主机地址 + 端口号</strong>  </p>
+<p>​        例如: <a target="_blank" rel="noopener" href="http://127.0.0.1:5500/">http://127.0.0.1:5500</a></p>
+<p>   — 如果三者完全一致，称为<strong>同源</strong>，任意一个不一致，就<strong>非同源</strong> </p>
+<p> <strong>路径</strong>：访问窗口分享的文件夹下的其它文件内容</p>
+<p>   -&gt; 文件名</p>
+<p>   -&gt; 空路径（路由：后台拦截路劲，定义返回内容）</p>
+<p><strong>参数</strong>：?name=value&amp;name=value&amp;…</p>
+<p> <strong>锚点</strong>：#abc</p>
+<h3 id="3-open方法"><a href="#3-open方法" class="headerlink" title="3.open方法"></a>3.open方法</h3><p><strong>相当于js中获得A标签的能力</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>打开不凡首页<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>打开不凡首页，在当前页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>打开不凡首页，在iframe中<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>打开不凡首页，在新标签页<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>打开不凡首页，在新窗口<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>打开同源页面，在新窗口<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>关闭打开的页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">以下js代码演示</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> &lt;!-- iframe 标签用于在当前页面展示另一个页面的内容，俗称页面嵌套框架</span><br><span class="line"></span><br><span class="line">  是一个行内块标签，默认 <span class="number">300</span> * <span class="number">150</span> - 可以做钓鱼网站</span><br><span class="line"></span><br><span class="line">  &lt;iframe src=<span class="string">&quot;https://mail.163.com&quot;</span> frameborder=<span class="string">&quot;0&quot;</span> name=<span class="string">&quot;ifr&quot;</span>&gt;&lt;/iframe&gt;</span><br><span class="line"></span><br><span class="line"> --&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> btns = <span class="built_in">document</span>.querySelectorAll(<span class="string">&quot;button&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> otherWindow = <span class="literal">null</span>;</span><br><span class="line">  <span class="comment">// open方法会返回打开页面的window对象，同源页面可以使用window的所有方法，不同源只能使用 close方法，用于关闭打开的页面</span></span><br><span class="line">  btns[<span class="number">0</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// open(url) 新标签页打开一个网址</span></span><br><span class="line">   otherWindow = open(<span class="string">&quot;http://www.bufanui.com&quot;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">btns[<span class="number">1</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="comment">// open(url, 窗口名) 窗口名：a的target属性 / iframe名字 / 自定义名字</span></span><br><span class="line"> otherWindow = open(<span class="string">&quot;http://www.bufanui.com&quot;</span>, <span class="string">&quot;_self&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">btns[<span class="number">2</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="comment">// open(url, 窗口名) 窗口名：a的target属性 / iframe名字 / 自定义名字</span></span><br><span class="line"> otherWindow = open(<span class="string">&quot;http://www.bufanui.com&quot;</span>, <span class="string">&quot;ifr&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">btns[<span class="number">3</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="comment">// open(url, 窗口名) 窗口名：a的target属性 / iframe名字 / 自定义名字</span></span><br><span class="line">  otherWindow = open(<span class="string">&quot;http://www.bufanui.com&quot;</span>, <span class="string">&quot;newWindow&quot;</span>);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">btns[<span class="number">4</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">// open(url, 窗口名, 窗口特点) 当第二参数效果是打开新页面，加上第三个参数就可以打开新窗口</span></span><br><span class="line">   otherWindow = open(<span class="string">&quot;http://www.bufanui.com&quot;</span>, <span class="string">&quot;newPage&quot;</span>, <span class="string">&quot;top=50,left=50,width=200,height=200&quot;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">btns[<span class="number">5</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"> <span class="comment">// open(url, 窗口名, 窗口特点) 当第二参数效果是打开新页面，加上第三个参数就可以打开新窗口</span></span><br><span class="line"> otherWindow = open(<span class="string">&quot;http://127.0.0.1:5500/05-BOM/02-网址.html&quot;</span>, <span class="string">&quot;newPage&quot;</span>, <span class="string">&quot;top=50,left=50,width=200,height=200&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">btns[<span class="number">6</span>].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"> otherWindow.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>传入三个参数，第三个参数是一个逗号分隔的设置字符串，表示在新窗口中都显示哪些特性。下表列出了可以出现在这个字符串中的设置选项。</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">设置</th>
+<th align="left">值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">fullscreen</td>
+<td align="left">yes或no</td>
+<td align="left">表示浏览器窗口是否最大化。仅限IE</td>
+</tr>
+<tr>
+<td align="left">height</td>
+<td align="left">数值</td>
+<td align="left">表示新窗口的高度。不能小于100</td>
+</tr>
+<tr>
+<td align="left">left</td>
+<td align="left">数值</td>
+<td align="left">表示新窗口的左坐标。不能是负值</td>
+</tr>
+<tr>
+<td align="left">location</td>
+<td align="left">yes或no</td>
+<td align="left">表示是否在浏览器窗口中显示地址栏。不同浏览器的默认值不同。如果设置为no，地址栏可能会隐藏，也可能会被禁用（取决于浏览器）</td>
+</tr>
+<tr>
+<td align="left">menubar</td>
+<td align="left">yes或no</td>
+<td align="left">表示是否在浏览器窗口中显示菜单栏。默认值为no</td>
+</tr>
+<tr>
+<td align="left">resizable</td>
+<td align="left">yes或no</td>
+<td align="left">表示是否可以通过拖动浏览器窗口的边框改变其大小。默认值为no</td>
+</tr>
+<tr>
+<td align="left">scrollbars</td>
+<td align="left">yes或no</td>
+<td align="left">表示如果内容在视口中显示不下，是否允许滚动。默认值为no</td>
+</tr>
+<tr>
+<td align="left">status</td>
+<td align="left">yes或no</td>
+<td align="left">表示是否在浏览器窗口中显示状态栏。默认值为no</td>
+</tr>
+<tr>
+<td align="left">toolbar</td>
+<td align="left">yes或no</td>
+<td align="left">表示是否在浏览器窗口中显示工具栏。默认值为no</td>
+</tr>
+<tr>
+<td align="left">top</td>
+<td align="left">数值</td>
+<td align="left">表示新窗口的上坐标。不能是负值</td>
+</tr>
+<tr>
+<td align="left">width</td>
+<td align="left">数值</td>
+<td align="left">表示新窗口的宽度。不能小于100</td>
+</tr>
+</tbody></table>
+<p>如果第二个参数设置后效果是<strong>打开新的标签页</strong>，再加上此参数，会打开新的浏览器窗口；</p>
+<p>如果第二个参数设置后效果是<strong>不打开新标签页</strong>，方法会忽略第三个参数的作用：</p>
+<p><a target="_blank" rel="noopener" href="https://codepen.io/cool-rain/pen/dypjMXM">【点此查看示例】</a></p>
+<h3 id="4-history-历史记录对象"><a href="#4-history-历史记录对象" class="headerlink" title="4.history: 历史记录对象"></a>4.history: 历史记录对象</h3><p><strong>保存从窗口打开后，成功访问过的url的历史记录栈。出于安全方面的考虑，开发人员无法得知用户浏览过的 URL。不过，借由用户访问过的页面列表，同样可以在不知道实际 URL 的情况下实现后退和前进。</strong></p>
+<p>history + <strong>length</strong> 当前标签页历史记录的长度</p>
+<p> history + <strong>go(n)</strong>  跳转n页（正向前，负向后）</p>
+<p>history   <strong>go(0)</strong> 刷新当前页</p>
+<p>history  + <strong>forward()</strong>  向前跳转一页</p>
+<p> history + <strong>back()</strong> 向后跳转一页</p>
+<h3 id="5-location对象"><a href="#5-location对象" class="headerlink" title="5.location对象"></a>5.location对象</h3><p><strong>location</strong>: ⭐</p>
+<p>  + 解析URL内容所得对象</p>
+<p>  + <strong>origin</strong> 页面源</p>
+<p>   + <strong>protocol</strong> 协议</p>
+<p>   + <strong>hostname</strong> 主机地址</p>
+<p>   + <strong>port</strong> 端口号</p>
+<p>  + <strong>path</strong>  路径</p>
+<p>  + <strong>search</strong> 查询参数</p>
+<p>  + <strong>hash</strong> 片段</p>
+<p>查看当前链接的信息</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;源&quot;</span>, location.origin);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;协议&quot;</span>, location.protocol);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;主机地址&quot;</span>, location.hostname);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;端口号&quot;</span>, location.port);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;参数&quot;</span>, location.search);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;锚点&quot;</span>, location.hash);</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="页面之间传值的方式"><a href="#页面之间传值的方式" class="headerlink" title="页面之间传值的方式"></a>页面之间传值的方式</h3><p><strong>body部分</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>经济<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>政治<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>体育<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>军事<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>娱乐<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>影视<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>js部分</strong></p>
+<p><strong>提前创建好文件detail.html</strong></p>
+<p> <style><br>    * {<br>      margin: 0;<br>      padding: 0;<br>    }<br>    ul {<br>      list-style: none;<br>    }<br>    .padding {<br>      padding: 50px;<br>    }<br>    button {<br>      padding: 5px 20px;<br>    }<br>  </style></p>
+</head>
+<body>
+  <div class="padding">
+    <h2>详情</h2>
+    <p>TYPE：<span></span></p>
+    <button>返回</button>
+  </div>
+
+<p>  <script type="text/javascript"><br>    var search = decodeURI(location.search);<br>    // console.log(search);<br>    document.querySelector("span").innerText = search.split("=")[1];<br>    document.querySelector("button").onclick = function (){<br>      history.back();<br>    };<br>  </script></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="comment">//获取页面上ul这个dom对象</span></span><br><span class="line">    <span class="keyword">var</span> ulEle = <span class="built_in">document</span>.querySelector(<span class="string">&quot;ul&quot;</span>);  </span><br><span class="line">     <span class="comment">//点击ul时</span></span><br><span class="line">    ulEle.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//如果当前点击的类名是li时</span></span><br><span class="line">      <span class="keyword">if</span>(e.target.tagName === <span class="string">&quot;LI&quot;</span>)&#123;</span><br><span class="line">        <span class="comment">// 路径中文编码  encodeURI()  解码： decodeURI()</span></span><br><span class="line">          <span class="comment">//提前创建好文件,此时填入-打开此文件路径, +获取当前点击的元素   + 默认当前页面跳转</span></span><br><span class="line">        open(<span class="string">&quot;./detail.html?type=&quot;</span> + e.target.innerText, <span class="string">&quot;_self&quot;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-navigator"><a href="#6-navigator" class="headerlink" title="6.navigator"></a>6.navigator</h3><p><strong>navigator</strong></p>
+<p> <code>navigator.userAgent </code> 用户代理片段 - 每个浏览器都会塞信息在里面，可以同过判断独特信息检测当前浏览器环境 (UA 检测)</p>
+<p> <code>navigator.onLine</code>  检测设备是否是在线的</p>
+<p>检测当前浏览器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var browserName = navigator.userAgent,</span><br><span class="line">      //区分手机端还是PC端</span><br><span class="line">      isMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(browserName)),</span><br><span class="line">      // 是否是火狐浏览器</span><br><span class="line">      isFirefox = /firefox/i.test(browserName),</span><br><span class="line">      // 是否是谷歌浏览器</span><br><span class="line">      isChrome = /chrome/i.test(browserName) &amp;&amp; /webkit/i.test(browserName) &amp;&amp; /mozilla/i.test(browserName);</span><br></pre></td></tr></table></figure>
+
+<p> </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">判断此时浏览器是否是谷歌,如果是盒子的颜色就变成绿色</span><br><span class="line"><span class="keyword">if</span>(isChrome)&#123;   <span class="built_in">document</span>.querySelector(<span class="string">&quot;.box&quot;</span>).style.backgroundColor=<span class="string">&quot;#0f0&quot;</span>; &#125;</span><br><span class="line"></span><br><span class="line">    打印浏览器类型,返回结果是ture和flase</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;是谷歌？&quot;</span>, isChrome);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;是火狐？&quot;</span>, isFirefox);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;是移动端？&quot;</span>, isMobile);</span><br><span class="line">    </span><br><span class="line">    判断当前是否联网</span><br><span class="line">    <span class="built_in">window</span>.ononline = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;当前是否联网：&quot;</span>, navigator.onLine);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">window</span>.onoffline = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;当前是否联网：&quot;</span>, navigator.onLine);</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-正则表达式"><a href="#7-正则表达式" class="headerlink" title="7.正则表达式"></a>7.正则表达式</h3><p> <strong>正则：规则表达式，用于匹配字符串中某段内容，对象类型</strong></p>
+<p>  <strong>声明：</strong></p>
+<p>   <strong>1. new RegExp(规则, 属性)</strong></p>
+<p>   <strong>2. /规则/属性</strong></p>
+<p>   <strong>规则：描述匹配的内容</strong></p>
+<p>   <strong>属性：i 忽略大小写  g 全局匹配  m 多行匹配/  u开启unicode支持 / y精准匹配</strong></p>
+<p>​    <strong>属性不论顺序</strong></p>
+<p>  <strong>使用：</strong></p>
+<p><strong>正则.test(字符串)  返回字符串是否有符合规则的片段  true/false</strong></p>
+<p> <strong>字符串.match(正则) 返回一个数组，内容是 字符串中符合规则的片段，如果没有返回 null（正则带 g(全局匹配) 匹配所有符合条件的)</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    <span class="comment">//声明一个数组</span></span><br><span class="line">    <span class="keyword">var</span> str = <span class="string">&quot;hello wroLd&quot;</span>;</span><br><span class="line">    <span class="comment">//声明一个变量给他赋值</span></span><br><span class="line">    <span class="keyword">var</span> reg = <span class="regexp">/llo/</span>;</span><br><span class="line">   <span class="comment">// 使用正则test方法,用来判断字符串</span></span><br><span class="line">    判断reg里面是否含有符合规则的片段,返回ture和<span class="literal">false</span></span><br><span class="line">    <span class="built_in">console</span>.log(reg.test(str)); <span class="comment">// true</span></span><br><span class="line">    判断str里面是否含有符合规则的片段,返回ture和<span class="literal">false</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="regexp">/nice/</span>.test(str)); <span class="comment">// false</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 使用字符串.match(正则) 返回一个数组的值</span></span><br><span class="line">    返回此时的reg数组里面的值 得出llo </span><br><span class="line">    <span class="built_in">console</span>.log(str.match(reg)); <span class="comment">// [llo]</span></span><br><span class="line">    </span><br><span class="line">    返回此时str里面的数组判断是否符合 nice片段  返回值是<span class="literal">null</span></span><br><span class="line">    <span class="built_in">console</span>.log(str.match(<span class="regexp">/nice/</span>)); <span class="comment">// null</span></span><br><span class="line">    </span><br><span class="line">    返回此时str数组的值,判断是否有l片段 g是全局匹配  返回[<span class="number">1</span>,<span class="number">1</span>]</span><br><span class="line">    <span class="built_in">console</span>.log(str.match(<span class="regexp">/l/g</span>)); <span class="comment">// [l, l]</span></span><br><span class="line">    返回此时str数组的值,判断是否有l  g是全局匹配,i是忽略大小写 返回[l.l.L]</span><br><span class="line">    <span class="built_in">console</span>.log(str.match(<span class="regexp">/l/gi</span>)); <span class="comment">// [l, l, L]</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// \d 表示数字  \D 非数字</span></span><br><span class="line">    <span class="comment">// \w 数字字母下划线  \W 非数字字母下划线</span></span><br><span class="line">    <span class="comment">// [a-z] 所有小写英文字母  [A-z] 不论大小写  [A-Z] 全大写 </span></span><br><span class="line">    使用字符串math返回数组的值  d返回数字 g全局匹配  返回的数组是<span class="number">10</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;hello12 w_45  6o&amp;)344rld78&quot;</span>.match(<span class="regexp">/\d/g</span>));</span><br><span class="line">    </span><br><span class="line">    使用字符串math返回数组的值  匹配w (数字字母下划线)  g全局匹配  返回的数组是<span class="number">27</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;_hel )(lo12 wUIOWEI456o34*4r&amp;ld78&quot;</span>.match(<span class="regexp">/\w/g</span>));</span><br><span class="line">    </span><br><span class="line">    使用字符串math返回数组的值  匹配a-z (所有小写英文字母 )  g全局匹配  返回的数组是<span class="number">10</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;_hel )(lo12 wUIOWEI456o34*4r&amp;ld78&quot;</span>.match(<span class="regexp">/[a-z]/g</span>));</span><br><span class="line">    </span><br><span class="line">    使用字符串math返回数组的值  匹配A-Z(全大写)  g全局匹配  返回的数组是<span class="number">6</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;_hel )(lo12 wUIOWEI456o34*4r&amp;ld78&quot;</span>.match(<span class="regexp">/[A-Z]/g</span>));</span><br><span class="line">    </span><br><span class="line">    使用字符串math返回数组的值  匹配A-z(不论大小写)  g全局匹配  返回的数组是<span class="number">17</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;_hel )(lo12 wUIOWEI456o34*4r&amp;ld78&quot;</span>.match(<span class="regexp">/[A-z]/g</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 量词 + &gt;=1 ; ? 0||1; * &gt;= 0 ; &#123;n&#125; n ; &#123;n,&#125; &gt;= n; &#123;n,m&#125; n&lt;= 次数 &lt;= m</span></span><br><span class="line">    <span class="comment">// 量词? 能取少不取多</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;babaabaaa&quot;</span>.match(<span class="regexp">/a*/g</span>)); <span class="comment">// [&quot;&quot;,&quot;a&quot;,&quot;&quot;,&quot;aa&quot;,&quot;&quot;,&quot;aaa&quot;,&quot;&quot;]</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;babaabaaa&quot;</span>.match(<span class="regexp">/a+/g</span>)); <span class="comment">// [&quot;a&quot;,&quot;aa&quot;,&quot;aaa&quot;]</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;babaabaaa&quot;</span>.match(<span class="regexp">/a?/g</span>)); <span class="comment">// [&quot;&quot;,&quot;a&quot;,&quot;&quot;,&quot;a&quot;,&quot;a&quot;,&quot;&quot;,&quot;a&quot;,&quot;a&quot;,&quot;a&quot;,&quot;&quot;]</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;babaabaaa&quot;</span>.match(<span class="regexp">/a&#123;2&#125;/g</span>)); <span class="comment">// [&quot;aa&quot;, &quot;aa&quot;]</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;babaabaaa&quot;</span>.match(<span class="regexp">/a&#123;2,&#125;/g</span>)); <span class="comment">// [&quot;aa&quot;, &quot;aaa&quot;]</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;babaabaaa&quot;</span>.match(<span class="regexp">/a&#123;1,2&#125;/g</span>)); <span class="comment">// [&quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;]</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;babaabaaa&quot;</span>.match(<span class="regexp">/a&#123;1,2&#125;?/g</span>)); <span class="comment">// [&quot;a&quot;, &quot;a&quot;,&quot;a&quot;, &quot;a&quot;,&quot;a&quot;,&quot;a&quot;]</span></span><br><span class="line"></span><br><span class="line">  &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://link.hhtjim.com/163/569213220.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://link.hhtjim.com/163/1894094482.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="ture"
+        data-ae="ture"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>弹性布局Flex - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="弹性布局FLexjustify-content: 控制弹性元素在主轴的排列方式​    flex-start; 起始位置​     flex-end;结尾位置​     center;居中​    ,"> 
+    <meta name="author" content="a-feng"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="弹性布局Flex - Hexo"/>
+    <meta name="twitter:description" content="弹性布局FLexjustify-content: 控制弹性元素在主轴的排列方式​    flex-start; 起始位置​     flex-end;结尾位置​     center;居中​    ,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="弹性布局Flex - Hexo"/>
+    <meta property="og:description" content="弹性布局FLexjustify-content: 控制弹性元素在主轴的排列方式​    flex-start; 起始位置​     flex-end;结尾位置​     center;居中​    ,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">弹性布局Flex</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">弹性布局Flex</h1>
+        <div class="stuff">
+            <span>十二月 28, 2021</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h3 id="弹性布局FLex"><a href="#弹性布局FLex" class="headerlink" title="弹性布局FLex"></a>弹性布局FLex</h3><h4 id="justify-content-控制弹性元素在主轴的排列方式"><a href="#justify-content-控制弹性元素在主轴的排列方式" class="headerlink" title="justify-content: 控制弹性元素在主轴的排列方式"></a><strong>justify-content</strong>: 控制弹性元素在主轴的排列方式</h4><p>​    <strong>flex-start</strong>; 起始位置<br>​     <strong>flex-end</strong>;结尾位置<br>​     <strong>center</strong>;居中<br>​     <strong>space-around</strong>  空白环绕 - 元素两侧空白间隙相等<br>​     <strong>space-between</strong> 两侧元素贴容器，元素之间的空白间隙相同<br>​     <strong>space-evenly</strong>存在兼容  空白间隙等间分布</p>
+<p><strong>align-items:</strong> 设置纵向交叉轴的位置<br><strong>flex-start:</strong> 元素与容器的顶部对齐。<br><strong>flex-end:</strong> 元素与容器的底部对齐。<br><strong>center</strong>: 元素纵向居中。<br><strong>baseline:</strong> 元素在容器的基线位置显示。<br><strong>stretch:</strong> 元素被拉伸以填满整个容器。</p>
+<h4 id="flex-direction-定义元素在容器里摆放的方向"><a href="#flex-direction-定义元素在容器里摆放的方向" class="headerlink" title="flex-direction 定义元素在容器里摆放的方向"></a>flex-direction 定义元素在容器里摆放的方向</h4><p><strong>row:</strong> 元素摆放的方向和文字方向一致。<br><strong>row-reverse</strong>: 元素摆放的方向和文字方向相反。<br><strong>column:</strong> 元素从上放到下。<br><strong>column-reverse:</strong> 元素从下放到上。</p>
+<h4 id="flex-wrap-换行"><a href="#flex-wrap-换行" class="headerlink" title="flex-wrap:换行"></a>flex-wrap:换行</h4><p><strong>nowrap:</strong> 所有的元素都在一行。<br><strong>wrap:</strong> 元素自动换成多行。<br><strong>wrap-reverse</strong>: 元素自动换成逆序的多行。</p>
+<p>flex-direction和flex-wrap两个属性经常会一起使用，所以有缩写属性flex-flow。这个缩写属性接受两个属性的值，两个值中间以空格隔开。</p>
+<p>举个例子，你可以用flex-flow: row wrap去设置行并自动换行。</p>
+<h4 id="可以使用align-content来决定行与行之间隔多远。这个属性接受这些值："><a href="#可以使用align-content来决定行与行之间隔多远。这个属性接受这些值：" class="headerlink" title="可以使用align-content来决定行与行之间隔多远。这个属性接受这些值："></a>可以使用align-content来决定行与行之间隔多远。这个属性接受这些值：</h4><p><strong>flex-start</strong>: 多行都集中在顶部。<br><strong>flex-end</strong>: 多行都集中在底部。<br><strong>center</strong>: 多行居中。<br><strong>space-between</strong>: 行与行之间保持相等距离。<br><strong>space-around</strong>: 每行的周围保持相等距离。<br><strong>stretch</strong>: 每一行都被拉伸以填满容器。<br>这可能有些容易混淆，但align-content决定行之间的间隔，而align-items决定元素整体在容器的什么位置。只有一行的时候align-content没有任何效果。</p>
+<h4 id="align-self-设置单个样式的方法"><a href="#align-self-设置单个样式的方法" class="headerlink" title="align-self 设置单个样式的方法"></a>align-self 设置单个样式的方法</h4><p><strong>flex-start;</strong> 起始位置<br>**flex-end;**结尾位置<br>center;居中</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://link.hhtjim.com/163/569213220.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://link.hhtjim.com/163/1894094482.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="ture"
+        data-ae="ture"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
