@@ -634,6 +634,6 @@ $(function() {
         comment.click();
     }
 		
-    console.log("%c Github %c","background:#24272A; color:#ffffff","","https://github.com/Fechin/hexo-theme-diaspora")
+    console.log("%c Github %c","background:#24272A; color:#f5f5f5","","阿飞邀你一起看日出啊,美女!")
 })
 
